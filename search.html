@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Products</title>
+
+    <!-- Font Awesome CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Custom CSS file link -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Custom JS file link -->
+    <script src="scripts.js" defer></script>
+</head>
+
+<body class="page-search">
+    <header class="header">
+        <div class="flex">
+            <a href="page.html" class="logo">Khobz<span>dar</span></a>
+            <nav class="navbar">
+                <a href="page.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="search.html">Search</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="search-form">
+        <form id="searchProductForm">
+            <input type="text" name="search" id="search" placeholder="search products..." class="box">
+            <input type="submit" value="search" class="btn">
+        </form>
+    </section>
+
+    <section class="products" style="padding-top: 0;">
+        <div class="box-container" id="searchResultsContainer"></div>
+    </section>
+
+    <section class="edit-product-form" style="display: none;">
+        <form id="updateProductForm" enctype="multipart/form-data">
+            <input type="hidden" name="id" id="update_id" />
+            <input type="hidden" name="old_image" id="update_old_image" />
+            <img id="update_img" src="" alt="" class="image" />
+            <input type="text" name="name" id="update_name" class="box" required placeholder="enter product name" />
+            <input type="number" name="price" id="update_price" min="0" class="box" required placeholder="enter product price" />
+            <input type="file" class="box" name="image" accept="image/jpg, image/jpeg, image/png" />
+            <input type="submit" value="update" class="btn" />
+            <input type="reset" value="cancel" id="close-update" class="option-btn" />
+        </form>
+    </section>
+</body>
+
+</html>
